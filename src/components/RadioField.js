@@ -6,7 +6,7 @@ import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
 
 export default function RowRadioButtonsGroup({ title, lab1, lab2, value, change, type,lableArray  }) {
-  console.log(type)
+  
   return (
     <FormControl component="fieldset" style={{marginLeft:10,marginBottom:15,minWidth:120}}>
       <FormLabel component="legend">{ title}</FormLabel>
