@@ -2,7 +2,7 @@ import React from 'react'
 import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
 import FormControl from '@mui/material/FormControl';
-import FormHelperText from '@mui/material/FormHelperText';
+
 
 const DropDown = ({value,lable,list,change,width,bottom}) => {
     return (
@@ -20,7 +20,7 @@ const DropDown = ({value,lable,list,change,width,bottom}) => {
           </MenuItem>
                     {list.map((val, index) => {
                         return (
-                            <MenuItem value={val}>{val}</MenuItem>
+                            <MenuItem key={index} value={val}>{val}</MenuItem>
               )
           })}
         </Select>

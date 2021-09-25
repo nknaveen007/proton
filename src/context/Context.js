@@ -9,11 +9,11 @@ export const FormProvider1 = (props) => {
     const [model, setmodel] = useState('')
     const [trim, settrim] = useState('')
     const [bodytype, setbodytype] = useState('')
-    const [chassisNumber, setchassisNumber] = useState(null)
-    const [manufacture, setmanufacture] = useState(null)
+    const [chassisNumber, setchassisNumber] = useState('')
+    const [manufacture, setmanufacture] = useState('')
     const [firstRegState, setfirstRegState] = useState(null)
-    const [vehicle, setvehicle] = useState(null)
-    const [vehicleVal, setvehicleVal] = useState(null)
+    const [vehicle, setvehicle] = useState('')
+    const [vehicleVal, setvehicleVal] = useState('')
 
 
     return (
@@ -48,7 +48,7 @@ export const FormProvider3 = (props) => {
     const [nationality, setnationality] = useState('')
     const [country, setcountry] = useState('')
     const [dateofbirth, setdateofbirth] = useState(null)
-    const [drivingLicence, setdrivingLicence] = useState(null)
+    const [drivingLicence, setdrivingLicence] = useState('')
     const [name, setname] = useState(null)
     const [mobile, setmobile] = useState(null)
     const [email, setemail] = useState(null)

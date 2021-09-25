@@ -1,5 +1,5 @@
 import React,{useContext} from 'react'
-import { Wraper,ColumnWraper } from './Policy.styles'
+import { Wraper } from './Policy.styles'
 import DropDown from '../DropDown'
 import DatePicker from '../DatePicker'
 import RadioField from '../RadioField'
@@ -13,6 +13,7 @@ const Policy = () => {
     
 
     const repairTypeIdarray = [1, 2, 3, 4, 5, 6, 7]
+    const claimYears = [1,2,3,4,5]
     
     
     const repairTypeIdhandleChange = (event) => {
@@ -27,12 +28,11 @@ const Policy = () => {
 
             <DropDown value={repairType} lable='Repair Type' list={repairTypeIdarray} change={repairTypeIdhandleChange} width='95%' bottom={ 3}/>
             
-            <ColumnWraper>
-                <RadioField title='NCL Provided' lab1='Yes' lab2='No' value={ncl} change={ setncl}/>
-                <RadioField title='Claim Ever Made' lab1='Yes' lab2='No' value={claim} change={setclaim}/>
-            </ColumnWraper>
+            <RadioField title='NCL Provided' lab1='Yes' lab2='No' value={ncl} change={ setncl}/>
+               
+            <RadioField title='Claim Ever Made' lab1='Yes' lab2='No'  value={claim} change={setclaim} type='year' lableArray={claimYears}/>
             
-            <DatePicker lable='Last Claim Made Date' vertical={10} value={claimDate} change={setclaimDate}/>
+            <DatePicker lable='Last Claim Date' vertical={10} value={claimDate} change={setclaimDate}/>
            
         </Wraper>
     )

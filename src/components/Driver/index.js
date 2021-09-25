@@ -4,6 +4,7 @@ import DropDown from '../DropDown'
 import TextField from '@mui/material/TextField';
 import DatePicker from '../DatePicker'
 import { FormContext3 } from '../../context/Context';
+import {YearListGenretor} from '../../Helper/Helper'
 
 
 const Driver = () => {
@@ -15,12 +16,16 @@ const Driver = () => {
 
     const nationalityIdarray = [1, 2, 3, 4, 5, 6, 7]
     const dLCountryIdarray = [91, 12, 113, 41, 55, 68, 71]
+    const drivingLicencearray = YearListGenretor(10)
 
     const nationalityIdhandleChange = (event) => {
         setnationality(event.target.value);
     };
     const dLCountryIdhandleChange = (event) => {
         setcountry(event.target.value);
+    };
+    const drivingLicencehandleChange = (event) => {
+        setdrivingLicence(event.target.value);
     };
     
     return (
@@ -32,7 +37,7 @@ const Driver = () => {
 
             <DatePicker lable='Date Of Birth' vertical={20} value={dateofbirth} change={setdateofbirth}/>
 
-            <DatePicker lable='Driving License UAE Exp' vertical={22} value={drivingLicence} change={setdrivingLicence}/>
+            <DropDown lable='Driving License UAE Exp'  value={drivingLicence} list={drivingLicencearray} change={drivingLicencehandleChange}/>
             
             <TextField id="standard-basic" label="Name" variant="standard" value={name} onChange={event=>setname(event.target.value)} style={{ width: '95%', marginLeft: 10, marginBottom: 30 }} />
             
